@@ -55,9 +55,6 @@ public:
     friend Point<space, t_coord> operator-(const Point<space, t_coord>& left, 
             const Point<space, t_coord> &right) {
 
-        //Лучше вычитать векторы одной размерности
-        //но если не  получилось приводим к максимальной размерности
-        int n = left.getSpace() > right.getSpace() ? left.getSpace():right.getSpace();
         Point minus;
         for (int i = 0; i < left.getSpace(); i++)
             minus.setCoord(left[i] - right[i],i);
