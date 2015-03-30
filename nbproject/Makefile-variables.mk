@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-Linux-x86
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux-x86
-CND_ARTIFACT_NAME_Debug=k-means
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux-x86/k-means
+CND_ARTIFACT_NAME_Debug=k-means-tool
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux-x86/k-means-tool
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux-x86/package
-CND_PACKAGE_NAME_Debug=k-means.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux-x86/package/k-means.tar
+CND_PACKAGE_NAME_Debug=k-means-tool.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux-x86/package/k-means-tool.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-Linux-x86
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux-x86
-CND_ARTIFACT_NAME_Release=k-means
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux-x86/k-means
+CND_ARTIFACT_NAME_Release=k-means-tool
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux-x86/k-means-tool
 CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux-x86/package
-CND_PACKAGE_NAME_Release=k-means.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux-x86/package/k-means.tar
+CND_PACKAGE_NAME_Release=k-means-tool.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux-x86/package/k-means-tool.tar
 #
 # include compiler specific variables
 #

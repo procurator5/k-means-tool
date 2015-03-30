@@ -4,16 +4,16 @@
     <logicalFolder name="SourceFiles"
                    displayName="Исходные файлы"
                    projectFiles="true">
-      <itemPath>Cluster.cpp</itemPath>
+      <itemPath>TImageCLusteringBitmap.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="HeaderFiles"
                    displayName="Файлы заголовков"
                    projectFiles="true">
-      <itemPath>Cluster.h</itemPath>
       <itemPath>Point.h</itemPath>
       <itemPath>TBitmap.h</itemPath>
       <itemPath>TCluster.h</itemPath>
+      <itemPath>TImageCLusteringBitmap.h</itemPath>
       <itemPath>TRandomPointsBitmap.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -45,15 +45,15 @@
           <commandLine>-lgd</commandLine>
         </linkerTool>
       </compileType>
-      <item path="Cluster.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Cluster.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="Point.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="TBitmap.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="TCluster.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TImageCLusteringBitmap.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="TImageCLusteringBitmap.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="TRandomPointsBitmap.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -80,15 +80,15 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="Cluster.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Cluster.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="Point.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="TBitmap.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="TCluster.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TImageCLusteringBitmap.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="TImageCLusteringBitmap.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="TRandomPointsBitmap.h" ex="false" tool="3" flavor2="0">
       </item>

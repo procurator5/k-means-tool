@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=k-means
+PROJECTNAME=k-means-tool
 
 # Active Configuration
 DEFAULTCONF=Debug
