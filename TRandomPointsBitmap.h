@@ -34,7 +34,7 @@ public:
         srand(time(NULL));
         for (int i = 0; i < num_points; i++) {
             //Генерируем случайные числа
-            Point <space, t_coord> pt;
+            TPoint <space, t_coord> pt;
             for (int i = 0; i < space; i++)
                 pt.setCoord(rand() % img_size, i);
             this->vpt.push_back(pt);

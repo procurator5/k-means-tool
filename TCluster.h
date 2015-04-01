@@ -7,11 +7,11 @@
 
 #ifndef TCLUSTER_H
 #define	TCLUSTER_H
-#include "Point.h"
+#include "TPoint.h"
 
 #include <vector>
 
-template <int space, typename t_coord > class TCluster : public Point<space, t_coord> {
+template <int space, typename t_coord > class TCluster : public TPoint<space, t_coord> {
 public:
     TCluster(){};
     virtual ~TCluster(){};
@@ -20,7 +20,7 @@ public:
         return scores.size();
     }//получаем размер вектора
 
-    inline void Add(Point<space, t_coord> pt) {
+    inline void Add(TPoint<space, t_coord> pt) {
         scores.push_back(pt);
     }//Добавляем пиксель к кластеру
 
@@ -30,7 +30,7 @@ public:
         int size = Size();
 
         for (int i = 0; i < space; i++)
-            lastPoint.setCoord(this->coords[i], i);
+            lastTPoint.setCoord(this->coords[i], i);
 
         memset(this->coords, 0, sizeof (t_coord) * space);
 
@@ -53,19 +53,20 @@ public:
     };
     
     bool isFixed(){
-        if (*this == lastPoint)
+        if (*this == lastTPoint)
             return true;
         else 
             return false;
     };
     
-    inline Point<space, t_coord>& at(unsigned i) {
+    //Доступ  к элементам вектора
+    inline TPoint<space, t_coord>& at(unsigned i) {
         return scores.at(i);
-    }//Доступ  к элементам вектора
-
+    }
+    
 private:
-    vector <Point<space, t_coord > >scores;
-    Point<space, t_coord> lastPoint;
+    vector <TPoint<space, t_coord > >scores;
+    TPoint<space, t_coord> lastTPoint;
 };
 
 #endif	/* TCLUSTER_H */

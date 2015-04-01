@@ -10,9 +10,8 @@
 #include <vector>
 #include <string>
 
-#include "Point.h"
+#include "TPoint.h"
 #include "TCluster.h"
-#include "Cluster.h"
 #include <time.h>
 #include <ctime>
 
@@ -25,7 +24,7 @@ public:
     TBitmap() {
     };
 
-    void setPoints(vector <Point <space, t_coord> > &vec){
+    void setPoints(vector <TPoint <space, t_coord> > &vec){
       vpt = vec;  
     };
     
@@ -52,7 +51,7 @@ public:
         for (;;) {//Запускаем основной цикл
 
             int chk = 0;
-            Bind(); //Связываем точки с кластерами
+            FindNearestCenter(); //Связываем точки с кластерами
             for (int j = 0; j < clusters.size(); j++)//Высчитываем новые координаты центроидов 
                 clusters[j].SetCenter();
             for (int p = 0; p < clusters.size(); p++)//Проверяем не совпадают ли они с предыдущими цент-ми
@@ -67,7 +66,7 @@ public:
     
     void printClusters(){
         for(int i=0; i<clusters.size();i++){
-            std::cout<<"Point #"<<i<<std::endl;
+            std::cout<<"TPoint #"<<i<<std::endl;
             clusters[i].print();
         }
          cout<<"CalculateTime: "<< calculateTime / (double)CLOCKS_PER_SEC<<" (sec.)"<<endl;   
@@ -75,7 +74,7 @@ public:
 
 protected:
 
-    void Bind() {
+    void FindNearestCenter() {
         for (int j = 0; j < clusters.size(); j++)
             clusters[j].Clear(); // Чистим кластер перед использованием
 
@@ -107,7 +106,7 @@ protected:
     }
 
 protected:
-    vector <Point <space, t_coord> > vpt;
+    vector <TPoint <space, t_coord> > vpt;
     vector <TCluster <space, t_coord> > clusters;
     time_t calculateTime;
 

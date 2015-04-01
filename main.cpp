@@ -9,6 +9,7 @@
 #include <time.h>
 #include <iostream>
 #include "TRandomPointsBitmap.h"
+#include "TImageCLusteringBitmap.h"
 
 #include <stdio.h>
 #include <getopt.h>
@@ -38,10 +39,11 @@ int main(int argc, char** argv) {
     int index;
 
     string output;
-    int clusters = 2;
-    int points = 100;
+    int clusters = 10;
+    int points = 10000;
     const int space = 2;
     string type = "RAND_INT";
+    string file;
 
     while (iarg != -1) {
         iarg = getopt_long(argc, argv, "t:o:p:c:f:v", long_options, &index);
@@ -56,6 +58,9 @@ int main(int argc, char** argv) {
 
             case 'o':
                 output = (string) optarg;
+                break;
+            case 'f':
+                file = (string) optarg;
                 break;
 
             case 't':
@@ -85,7 +90,16 @@ int main(int argc, char** argv) {
         if (!output.empty())
             img.vizualisation(output);
 
-    } else
+    } else if(type == "IMG_CLUST" && !file.empty()){
+        TImageCLusteringBitmap img;
+        img.loadImage(file);
+        img.initClusters(clusters);
+        img.Calculate();
+        img.printClusters();
+        if (!output.empty())
+            img.vizualisation(output);
+    }
+    else
         cout << "Incorrect type" << endl;
 
     return 0;

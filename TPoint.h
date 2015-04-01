@@ -1,6 +1,6 @@
 /**
  * @brief Класс для хранения информации о точке 
- * File:   Point.h
+ * File:   TPoint.h
  * @author: Иванов Владимир Игоревич (procurator9@gmail.com)
  *
  * Created on 27 Март 2015 г., 20:01
@@ -16,14 +16,14 @@
 
 using namespace std;
 
-template <int space, typename t_coord > class Point {
+template <int space, typename t_coord > class TPoint {
 public:
 
-    Point() {
+    TPoint() {
         memset(coords, 0, sizeof(t_coord)*space);
     };
 
-    virtual ~Point() {
+    virtual ~TPoint() {
     };
 
     // Вернуть размерность пространства
@@ -52,10 +52,10 @@ public:
      * @detailed При вычитании векторов получается расстояние между ними
      * 
      */
-    friend Point<space, t_coord> operator-(const Point<space, t_coord>& left, 
-            const Point<space, t_coord> &right) {
+    friend TPoint<space, t_coord> operator-(const TPoint<space, t_coord>& left, 
+            const TPoint<space, t_coord> &right) {
 
-        Point minus;
+        TPoint minus;
         for (int i = 0; i < left.getSpace(); i++)
             minus.setCoord(left[i] - right[i],i);
         
@@ -67,13 +67,13 @@ public:
      * @detailed Сравниваются поочередно все координаты векторов
      * 
      */
-    friend bool operator==(const Point<space, t_coord>& left, 
-            const Point<space, t_coord> &right) {
+    friend bool operator==(const TPoint<space, t_coord>& left, 
+            const TPoint<space, t_coord> &right) {
 
         //Лучше сравнивать векторы одной размерности
         //но если не  получилось приводим к максимальной размерности
         int n = left.getSpace() > right.getSpace() ? left.getSpace():right.getSpace();
-        Point minus;
+        TPoint minus;
         for (int i = 0; i < left.getSpace(); i++)
             if(left[i] != right[i])
                 return false;
